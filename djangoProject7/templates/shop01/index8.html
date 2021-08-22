@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function site() {
+            siteValue = document.getElementById('site').value
+            if (siteValue == 'naver'){
+                location.href = 'http://www.naver.com'
+            }else if (siteValue == 'daum'){
+
+            }else if (siteValue == 'google'){
+
+            }else{
+                alert('해당 사이트가 없습니다.')
+                document.getElementById('site').value = ''
+            }
+        }
+        function add() {
+            //input에 넣은 value를 가지고 와서 변수에 각각 넣어둠.
+            //input의 모든 value값은 스트링으로 읽어온다.!!
+            n1Value = document.getElementById('n1').value
+            n2Value = document.getElementById('n2').value
+            n11Value = parseInt(n1Value)
+            n22Value = parseInt(n2Value)
+            result = n11Value + n22Value
+
+            divTag = document.getElementById('div')
+            divTag.innerHTML = '더한 값은 ' + result
+        }
+        function login() {
+            //아이디 입력한 값을 가지고 와야함.
+            idValue = document.getElementById('user').value //'admin'
+            //패스워드 입력한 값을 가지고 와야함.
+            pwValue = document.getElementById('pw').value //'1234'
+
+            id = 'root'
+            pw = '1234'
+
+            result = '' //로그인 성공 여부 저장할 변수
+            if(idValue == id && pwValue == pw){ //and
+                result = '로그인 성공'
+            }else{
+                result = '로그인 실패'
+            }
+            divTag = document.getElementById('div')
+            divTag.innerHTML = '<font color=red>' + result + '</font>'
+        }
+    </script>
+</head>
+<body>
+가고 싶은 사이트(naver, daum, google)는 : <input id="site"><br>
+<button onclick="site()" style="background: blue">사이트 기능 처리</button>
+<hr>
+    숫자1: <input id="n1"><br>
+    숫자2: <input id="n2"><br>
+    <button onclick="add()" style="background: green">더하기 기능 처리</button>
+<hr>
+    아이디 : <input id="user" value="admin"> <br>
+    패스워드 : <input id="pw"> <br>
+    <button onclick="login()" style="background: hotpink">로그인 기능 처리</button>
+    <hr color="red">
+    <div id="div">
+
+    </div>
+</body>
+</html>

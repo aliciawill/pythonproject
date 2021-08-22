@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index3</title>
+    <!-- css -->
+    <style>
+        input{
+            background: chartreuse; /* 배경색 */
+            color: blue; /* 글자색 */
+            font-style: italic;
+            font: 20px 굴림;
+        }
+        textarea{
+            background: greenyellow;
+            color: red;
+        }
+        #one{
+            /* 특징, 속성, attribute, property*/
+            border : red 10px double;
+        }
+        .s1{
+            border : blue 5px dotted;
+            background: yellow;
+        }
+        button{ /* tag이름을 선택하라는 의미 */
+            background: aqua;
+            border: red 10px dot-dash;
+            font: 30px 궁서;
+        }
+        #two{ /* id인 two를 선택하라는 의미 */
+            background: blueviolet;
+            border: darkmagenta 10px dot-dash;
+            font: 20px 궁서;
+        }
+        .s2{ /* class인 s2를 선택하라는 의미 */
+            background: hotpink;
+            border: red 10px groove;
+            font: 15px HY엽서M;
+        }
+    </style>
+    <script>
+        alert('환영합니다.')
+    </script>
+</head>
+<body>
+<h3>회원가입화면입니다.</h3> <!-- header 1~6, 1이 제일 큼.-->
+<hr color="red">
+아이디: <input id="one"><br>
+패스워드: <input><br>
+이름: <input id="two"><br>
+<span class="s1">연락처:</span>
+    <select>
+            <option>011</option>
+            <option>019</option>
+            <option>010</option>
+          </select>
+        <input type="text"><br>
+성별: <input type="radio">남
+     <input type="radio">여 <br>
+취미: <input type="checkbox">운동
+     <input type="checkbox">독서
+     <input type="checkbox">등산 <br>
+<span class="s2">이메일:</span> <input type="email" placeholder="@을 반드시 사용해주세요."> <br>
+<span class="s2">생년월일:</span> <input type="date"> <br>
+<span class="s2">좋아하는 색:</span> <input type="color"> <br>
+<span class="s1">하고 싶은 말:</span> <textarea cols="30" rows="10" placeholder="자세하게 써주세요."></textarea> <br>
+<button>회원가입 처리 요청</button>
+</body>
+</html>

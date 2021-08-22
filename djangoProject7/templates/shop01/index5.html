@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        food = confirm('아침을 먹었나요..') //true,false
+        alert('당신은 아침을 먹었나요>> ' + food)
+        if (food){
+            alert('배가 부르겠군요.')
+        }else{
+            alert('배고프시겠군요.')
+        }
+        temp = prompt('현재 온도는..') //'33', '25'
+        //입력을 통해서 가지고 온 숫자는 스트링처리!!!
+        //temp2 = 100, 숫자이기 때문에 연산자의 대상이 됨.
+        //temp3 = '010', 문자이기 때문에 연산자의 대상이 아니다.
+        temp2 = parseInt(temp)
+        if (temp2 >= 30){
+            alert('너무 더워요...')
+        }else{
+            alert('아직 선선해요...')
+        }
+    </script>
+</head>
+<body>
+    <button style="background: hotpink">나를 눌러요..!!</button>
+</body>
+</html>

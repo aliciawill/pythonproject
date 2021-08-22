@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: lime;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function (){
+          $('#b1').click(function (){
+              alert('버튼을 클릭해주세요.')
+              money = $('#money').val()
+              count = $('#count').val()
+              alert('입력한 가격은 ' + money + '이고 수량은 ' + count)
+          }) //b1
+           $('#b2').click(function (){
+               pw1Value = $('#pw1').val()
+               pw2Value = $('#pw2').val()
+               if (pw1Value == pw2Value){
+                 //alert('동일함.')
+                 $('#d1').html('<font color=red>동일함</font>')
+                  //$('#d1').text('동일함')
+               }else {
+                 //alert('동일하지 않음.')
+                 $('#d1').html('<font color=blue>동일하지 않음.</font>')
+               }
+          }) //b2
+      }) //start
+    </script></head><body>
+    하나당 가격: <input id="money"> <br>
+    물건의 개수: <input id="count"> <br>
+    <button id="b1">결제하기</button>
+    <hr>
+    패스워드1: <input id="pw1"> <br>
+    패스워드2: <input id="pw2"> <br>
+    <button id="b2">패스워드가 동일한지 체크</button>
+    <hr>
+    <div id="d1">
+    </div>
+</body>
+</html>
